@@ -23,16 +23,17 @@ function App() {
   };
 
   useEffect(() => {
+   
     const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (retriveContacts) setContacts(retriveContacts);
-  }, []);
+  },[]);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
   }, [contacts]);
 
   return (
-    <div className="ui container">
+    <div className="ui container ">
       <Header />
       <AddContact addc={addContactHandler} />
       <ContactList contacts={contacts} getContactId={removeContactHandler} />
