@@ -6,8 +6,8 @@ import Gmaps from "./components/Gmaps";
 ReactDOM.render(
   
     <React.StrictMode>
-    {/* <App /> */}
- <Gmaps/>
+    <App />
+ {/* <Gmaps/> */}
 
   </React.StrictMode>
     
